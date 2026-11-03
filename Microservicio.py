@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request
-from flasgger import Swagger
 from pathlib import Path
 from datetime import datetime
 import mysql.connector
@@ -41,7 +40,6 @@ except Error as e:
 
 
 app = Flask(__name__)
-swagger = Swagger(app, template_file=str(Path(__file__).with_name("swagger.json")))
 elementos = []  
 siguiente_id = 1
 
